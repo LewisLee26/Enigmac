@@ -1,23 +1,18 @@
 #include <iostream>
-#include <string>
-#include <string.h>
-#include <algorithm>
 
-using namespace std;
-
-string alphabet = "abcdefghijklmnopqrstuvwxyz";
+std::string alphabet = "abcdefghijklmnopqrstuvwxyz";
 
 class Connector {
     private:
-        string characterPairs;
+        std::string characterPairs;
     public:
-        Connector(string characterPairsInput){
+        Connector(std::string characterPairsInput){
             characterPairs = characterPairsInput;
         }
         void setCharacterPairs(char characterPairsInput[26]){
             characterPairs = characterPairsInput;
         }
-        string getCharacterPairs(){
+        std::string getCharacterPairs(){
             return characterPairs;
         }
         void resetCharacterPairs(){
@@ -33,7 +28,7 @@ class Rotor: public Connector {
     private:
         int rotorPosition;
     public:
-        Rotor(string characterPairsInput, int rotorPositionInput) : Connector(characterPairsInput) {
+        Rotor(std::string characterPairsInput, int rotorPositionInput) : Connector(characterPairsInput) {
             rotorPosition = rotorPositionInput;
         }
         char getCharacterPair(char characterInput, bool forward){
@@ -61,20 +56,20 @@ class Rotor: public Connector {
 
 class Plugboard: public Connector {
     public:
-        Plugboard(string characterPairsInput) : Connector(characterPairsInput) {}
-        void swapCharacters(string characterPair){
+        Plugboard(std::string characterPairsInput) : Connector(characterPairsInput) {}
+        void swapCharacters(std::string characterPair){
             char tempChar = getCharacterPairs().at(alphabet.find(characterPair.at(0)));
             getCharacterPairs().at(alphabet.find(characterPair.at(0))) = getCharacterPairs().at(alphabet.find(characterPair.at(1)));
             getCharacterPairs().at(alphabet.find(characterPair.at(1))) = tempChar;
         }
-        void setCharacterPairs(string characterPairs) {
+        void setCharacterPairs(std::string characterPairs) {
             for (int i = 0; i < 13; i++) {
                 swapCharacters({characterPairs[i * 2], characterPairs[i * 2 + 1]});
             }
         }
 };
 
-string rotors[8] = {
+std::string rotors[8] = {
         "ekmflgdqvzntowyhxuspaibrcj",
         "ajdksiruxblhwtmcqgznpyfvoe",
         "bdfhjlcprtxvznyeiwgakmusqo",
@@ -85,7 +80,7 @@ string rotors[8] = {
         "fkqhtlxocbjspdzramewniuygv"
 };
 
-string reflectors[3] = {
+std::string reflectors[3] = {
         "ejmzalyxvbwfcrquontspikhgd",
         "nzjhgrcxmyswboufaivlpekqdt",
         "fkqhtlxocbjspdzramewniuygv"
@@ -98,10 +93,10 @@ char rotorPass(Rotor rotorSlots[3], char currentChar, bool forward){
     return currentChar;
 }
 
-string enigma(string textInput, Rotor rotorSlot1, Rotor rotorSlot2, Rotor rotorSlot3, Plugboard plugboard, Connector reflector){
+std::string enigma(std::string textInput, Rotor rotorSlot1, Rotor rotorSlot2, Rotor rotorSlot3, Plugboard plugboard, Connector reflector){
     // standardize the text, change umlauts to ae, ue, oe ect
     char currentChar;
-    string outputString;
+    std::string outputString;
     Rotor rotorSlots[3] = {rotorSlot3, rotorSlot2, rotorSlot1};
     for (int i = 0; i < textInput.length(); i++){
         rotorSlots[0] = rotorSlot3;
@@ -141,17 +136,17 @@ int main() {
 
     Connector reflector(reflectors[0]);
     // Connector reflector(alphabet);
-    string textInput = "helloworld";
+    std::string textInput = "helloworld";
     rotor1.setRotorPosition(0);
     rotor2.setRotorPosition(0);
     rotor3.setRotorPosition(0);
-    string encrypted = enigma(textInput, rotor1, rotor2, rotor3, plugboard, reflector);
-    cout << encrypted << endl;
+    std::string encrypted = enigma(textInput, rotor1, rotor2, rotor3, plugboard, reflector);
+    std::cout << encrypted << std::endl;
     rotor1.setRotorPosition(0);
     rotor2.setRotorPosition(0);
     rotor3.setRotorPosition(0);
-    string decrypted = enigma(encrypted, rotor1, rotor2, rotor3, plugboard, reflector);
-    cout << decrypted << endl;
+    std::string decrypted = enigma(encrypted, rotor1, rotor2, rotor3, plugboard, reflector);
+    std::cout << decrypted << std::endl;
 
     return 0;
 }
