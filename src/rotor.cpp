@@ -3,6 +3,7 @@
 #include "enigma.hpp"
 
 Rotor::Rotor(std::string characterPairsInput, int rotorPositionInput) : Connector(characterPairsInput) {
+    checkStringLength(characterPairsInput);
     rotorPosition = rotorPositionInput;
 }
 char Rotor::getCharacterPair(char characterInput, bool forward){
@@ -23,5 +24,4 @@ void Rotor::setRotorPosition(int positionInput){
 }
 void Rotor::incrementRotorPosition(){
     rotorPosition++;
-
 }

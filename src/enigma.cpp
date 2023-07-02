@@ -1,14 +1,22 @@
 #include <iostream>
 #include <string>
+#include <stdexcept>
 #include "enigma.hpp"
 
-const std::string alphabet = "abcdefghijklmnopqrstuvwxyz";
+const std::string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+void checkStringLength(std::string stringInput, int num){
+    if (stringInput.length() != 26){
+         throw std::invalid_argument( "received incorrect length argument" );
+    }
+}
 
 Connector::Connector(std::string characterPairsInput){
+    checkStringLength(characterPairsInput);
     characterPairs = characterPairsInput;
 }
-void Connector::setCharacterPairs(char characterPairsInput[26]){
+void Connector::setCharacterPairs(std::string characterPairsInput){
+    checkStringLength(characterPairsInput);
     characterPairs = characterPairsInput;
 }
 std::string Connector::getCharacterPairs(){
@@ -22,21 +30,25 @@ char Connector::getCharacterPair(char characterInput){
     return characterPairs.at(index % 26);
 }
 
-const std::string rotors[8] = {
-        "ekmflgdqvzntowyhxuspaibrcj",
-        "ajdksiruxblhwtmcqgznpyfvoe",
-        "bdfhjlcprtxvznyeiwgakmusqo",
-        "esovpzjayquirhxlnftgkdcmwb",
-        "vzbrgityupsdnhlxawmjqofeck",
-        "jpgvoumfyqbenhzrdkasxlictw",
-        "nzjhgrcxmyswboufaivlpekqdt",
-        "fkqhtlxocbjspdzramewniuygv"
+const std::string rotors[10] = {
+        "EKMFLGDQVZNTOWYHXUSPAIBRCJ",
+        "AJDKSIRUXBLHWTMCQGZNPYFVOE",
+        "BDFHJLCPRTXVZNYEIWGAKMUSQO",
+        "ESOVPZJAYQUIRHXLNFTGKDCMWB",
+        "VZBRGITYUPSDNHLXAWMJQOFECK",
+        "JPGVOUMFYQBENHZRDKASXLICTW",
+        "NZJHGRCXMYSWBOUFAIVLPEKQDT",
+        "FKQHTLXOCBJSPDZRAMEWNIUYGV",
+        "LEYJVCNIXWPBQMDRTAKZGFUHOS",
+        "FSOKANUERHMBTIYCWLQPZXVGJD"
 };
 
-const std::string reflectors[3] = {
-        "ejmzalyxvbwfcrquontspikhgd",
-        "nzjhgrcxmyswboufaivlpekqdt",
-        "fkqhtlxocbjspdzramewniuygv"
+const std::string reflectors[5] = {
+        "EJMZALYXVBWFCRQUONTSPIKHGD",
+        "YRUHQSLDPXNGOKMIEBFZCWVJAT",
+        "FVPJIAOYEDRZXWGCTKUQSBNMHL",
+        "ENKQAUYWJICOPBLMDXZVFTHRGS",
+        "RDOBJNTKVEHMLFCWZAXGYIPSUQ"
 };
 
 char rotorPass(Rotor rotorSlots[3], char currentChar, bool forward){
@@ -47,8 +59,20 @@ char rotorPass(Rotor rotorSlots[3], char currentChar, bool forward){
 }
 
 std::string enigma(std::string textInput, Rotor rotorSlot1, Rotor rotorSlot2, Rotor rotorSlot3, Plugboard plugboard, Connector reflector){
-    // standardize the text, change umlauts to ae, ue, oe ect
+    for (char& c : textInput) {
+        c = std::toupper(c);
+    }
+
+    int j = 0;
+    for (int i = 0; i < textInput.size(); i++) {
+        if (std::isalpha(textInput[i]) && textInput[i] != ' ') {
+            textInput[j] = textInput[i];
+            j++;
+        }
+    }
+    textInput.resize(j);
     char currentChar;
+
     std::string outputString;
     Rotor rotorSlots[3] = {rotorSlot3, rotorSlot2, rotorSlot1};
     for (int i = 0; i < textInput.length(); i++){
