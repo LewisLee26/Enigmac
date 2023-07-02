@@ -1,4 +1,3 @@
-#include <iostream>
 #include <string>
 #include <stdexcept>
 #include "enigma.hpp"
@@ -9,25 +8,6 @@ void checkStringLength(std::string stringInput, int num){
     if (stringInput.length() != 26){
          throw std::invalid_argument( "received incorrect length argument" );
     }
-}
-
-Connector::Connector(std::string characterPairsInput){
-    checkStringLength(characterPairsInput);
-    characterPairs = characterPairsInput;
-}
-void Connector::setCharacterPairs(std::string characterPairsInput){
-    checkStringLength(characterPairsInput);
-    characterPairs = characterPairsInput;
-}
-std::string Connector::getCharacterPairs(){
-    return characterPairs;
-}
-void Connector::resetCharacterPairs(){
-    characterPairs = alphabet;
-}
-char Connector::getCharacterPair(char characterInput){
-    int index = alphabet.find(characterInput);
-    return characterPairs.at(index % 26);
 }
 
 const std::string rotors[10] = {
