@@ -15,24 +15,24 @@ Enigma is a function that takes a string and a set of enigma settings which outp
 ## Constants 
 ### Rotor Dictionary
 This is an array of strings each of which represent the standard rotors used by the Germans during WWII. Each string is 26 characters long and each character represents a connection. The character at index 0 of the string is connected to 'a', the character at index 0 of the string is connected to 'b', ect.
-- **I** = EKMFLGDQVZNTOWYHXUSPAIBRCJ
-- **II** = AJDKSIRUXBLHWTMCQGZNPYFVOE
-- **III** = BDFHJLCPRTXVZNYEIWGAKMUSQO
-- **IV** = ESOVPZJAYQUIRHXLNFTGKDCMWB
-- **V** = VZBRGITYUPSDNHLXAWMJQOFECK
-- **VI** = JPGVOUMFYQBENHZRDKASXLICTW
-- **VII** = NZJHGRCXMYSWBOUFAIVLPEKQDT
-- **VIII** = FKQHTLXOCBJSPDZRAMEWNIUYGV
-- **Beta** = LEYJVCNIXWPBQMDRTAKZGFUHOS
-- **Gamma** = FSOKANUERHMBTIYCWLQPZXVGJD
+- **0(I)** = EKMFLGDQVZNTOWYHXUSPAIBRCJ
+- **1(II)** = AJDKSIRUXBLHWTMCQGZNPYFVOE
+- **2(III)** = BDFHJLCPRTXVZNYEIWGAKMUSQO
+- **3(IV)** = ESOVPZJAYQUIRHXLNFTGKDCMWB
+- **4(V)** = VZBRGITYUPSDNHLXAWMJQOFECK
+- **5(VI)** = JPGVOUMFYQBENHZRDKASXLICTW
+- **6(VII)** = NZJHGRCXMYSWBOUFAIVLPEKQDT
+- **7(VIII)** = FKQHTLXOCBJSPDZRAMEWNIUYGV
+- **8(Beta)** = LEYJVCNIXWPBQMDRTAKZGFUHOS
+- **9(Gamma)** = FSOKANUERHMBTIYCWLQPZXVGJD
 
 ### Reflector Dictionary
 This is an array of strings each of which represent the standard reflectors used by the Germans during WWII. Each string is 26 characters long and each character represents a connection. The character at index 0 of the string is connected to 'a', the character at index 0 of the string is connected to 'b', ect.
-- **UKW-A** = EJMZALYXVBWFCRQUONTSPIKHGD
-- **UKW-B** = YRUHQSLDPXNGOKMIEBFZCWVJAT
-- **UKW-C** = FVPJIAOYEDRZXWGCTKUQSBNMHL
-- **UKW-B thin** = ENKQAUYWJICOPBLMDXZVFTHRGS
-- **UKW-C thin** = RDOBJNTKVEHMLFCWZAXGYIPSUQ
+- **0(UKW-A)** = EJMZALYXVBWFCRQUONTSPIKHGD
+- **1(UKW-B)** = YRUHQSLDPXNGOKMIEBFZCWVJAT
+- **2(UKW-C)** = FVPJIAOYEDRZXWGCTKUQSBNMHL
+- **3(UKW-B thin)** = ENKQAUYWJICOPBLMDXZVFTHRGS
+- **4(UKW-C thin)** = RDOBJNTKVEHMLFCWZAXGYIPSUQ
 
 ### Alphabet   
 This is a string of the alphabet in uppercase.
