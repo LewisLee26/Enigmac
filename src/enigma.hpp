@@ -16,7 +16,6 @@ class Connector {
         Connector(std::string characterPairsInput);
         void setCharacterPairs(std::string characterPairsInput);
         std::string getCharacterPairs();
-        void resetCharacterPairs();
         char getCharacterPair(char characterInput);
 };
 

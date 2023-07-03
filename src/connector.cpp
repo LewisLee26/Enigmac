@@ -12,9 +12,6 @@ void Connector::setCharacterPairs(std::string characterPairsInput){
 std::string Connector::getCharacterPairs(){
     return characterPairs;
 }
-void Connector::resetCharacterPairs(){
-    characterPairs = alphabet;
-}
 char Connector::getCharacterPair(char characterInput){
     int index = alphabet.find(characterInput);
     return characterPairs.at(index % 26);

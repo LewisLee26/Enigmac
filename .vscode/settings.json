@@ -73,6 +73,10 @@
         "xtree": "cpp",
         "xutility": "cpp",
         "cctype": "cpp",
-        "regex": "cpp"
+        "regex": "cpp",
+        "bit": "cpp",
+        "clocale": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp"
     }
 }
