@@ -2,7 +2,7 @@
 
 ## Functions 
 ### enigma
-The enigma is a function that takes a string and a set of enigma settings which outputs an encoded string(in uppercase). To decode a string, use the encoded string as the text input along with the same enigma settings used to encode it.
+The enigma function takes a string and a set of enigma settings as inputs and outputs an encoded string(uppercase). To decode a string, input the encoded string along with the same enigma settings used to encode it.
 #### Arguments 
 - **Text Input:** A alphabetical string (ä = ae, ü = ue, ö = oe, ß = ss).
 - **Rotor Slot 1:** A Rotor object
