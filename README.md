@@ -1,8 +1,8 @@
-# Enigmapy
+# Enigmacpp
 
 ## Functions 
-### Enigma
-Enigma is a function that takes a string and a set of enigma settings which outputs an encoded string(in uppercase). To decode a string, use the encoded string as the text input along with the same enigma settings used to encode it.
+### enigma
+The enigma is a function that takes a string and a set of enigma settings which outputs an encoded string(in uppercase). To decode a string, use the encoded string as the text input along with the same enigma settings used to encode it.
 #### Arguments 
 - **Text Input:** A alphabetical string (ä = ae, ü = ue, ö = oe, ß = ss).
 - **Rotor Slot 1:** A Rotor object
@@ -14,7 +14,7 @@ Enigma is a function that takes a string and a set of enigma settings which outp
 
 ## Constants 
 ### Rotor Dictionary
-This is an array of strings each of which represent the standard rotors used by the Germans during WWII. Each string is 26 characters long and each character represents a connection. The character at index 0 of the string is connected to 'a', the character at index 0 of the string is connected to 'b', ect.
+This is an array of strings each of which represent the standard rotors used by the Germans during WWII. Each string is 26 characters long and each character represents a connection. The character at index 0 of the string is connected to 'A', the character at index 0 of the string is connected to 'B', etc.
 - **0(I)** = EKMFLGDQVZNTOWYHXUSPAIBRCJ
 - **1(II)** = AJDKSIRUXBLHWTMCQGZNPYFVOE
 - **2(III)** = BDFHJLCPRTXVZNYEIWGAKMUSQO
@@ -27,7 +27,7 @@ This is an array of strings each of which represent the standard rotors used by 
 - **9(Gamma)** = FSOKANUERHMBTIYCWLQPZXVGJD
 
 ### Reflector Dictionary
-This is an array of strings each of which represent the standard reflectors used by the Germans during WWII. Each string is 26 characters long and each character represents a connection. The character at index 0 of the string is connected to 'a', the character at index 0 of the string is connected to 'b', ect.
+This is an array of strings each of which represents the standard reflectors used by the Germans during WWII. Each string is 26 characters long and each character represents a connection. The character at index 0 of the string is connected to 'A', the character at index 0 of the string is connected to 'B', etc.
 - **0(UKW-A)** = EJMZALYXVBWFCRQUONTSPIKHGD
 - **1(UKW-B)** = YRUHQSLDPXNGOKMIEBFZCWVJAT
 - **2(UKW-C)** = FVPJIAOYEDRZXWGCTKUQSBNMHL
@@ -42,7 +42,7 @@ This is a string of the alphabet in uppercase.
 ### Rotor
 The Rotor class is used to initialise rotors.
 
-This class takes a string of length 26 as a argument. This string is used to represent the connections. The character at index 0 of the string is connected to 'a', the character at index 0 of the string is connected to 'b', ect. 
+This class takes a string of length 26 as an argument. This string is used to represent the connections. The character at index 0 of the string is connected to 'A', the character at index 0 of the string is connected to 'B', etc. 
 #### Methods
 - **getCharacterPair()**
 - **getRotorPosition()**
@@ -50,17 +50,17 @@ This class takes a string of length 26 as a argument. This string is used to rep
 - **incrementRotorPosition()**
 
 ### Plugboard
-The Plugboard class is used to initialise plugboard.
+The Plugboard class is used to initialise the plugboard.
 
-This class takes a string of length 26 as a argument. This string is used to represent the connections. The character at index 0 of the string is connected to 'a', the character at index 0 of the string is connected to 'b', ect. 
+This class takes a string of length 26 as an argument. This string is used to represent the connections. The character at index 0 of the string is connected to 'A', the character at index 0 of the string is connected to 'B', etc. 
 #### Methods
-- **swapCharacters**
+- **swapCharacters()**
 - **setCharacterPairs()**
 
 ### Connector
 The Connector class is the parent class for the Rotor and Plugboard classes. The Connector class is used to initialise reflectors.
 
-This class takes a string of length 26 as a argument. This string is used to represent the connections. The character at index 0 of the string is connected to 'a', the character at index 0 of the string is connected to 'b', ect. 
+This class takes a string of length 26 as an argument. This string is used to represent the connections. The character at index 0 of the string is connected to 'A', the character at index 0 of the string is connected to 'B', etc. 
 #### Methods
 - **setCharacterPairs()**
 - **getCharacterPairs()**
