@@ -42,7 +42,7 @@ The enigma function takes a string and a set of enigma settings as inputs and ou
 
 
 ## Constants 
-### Rotor Dictionary
+### Rotors
 This is an array of strings each of which represent the standard rotors used by the Germans during WWII. Each string is 26 characters long and each character represents a connection. The character at index 0 of the string is connected to 'A', the character at index 0 of the string is connected to 'B', etc.
 - **0(I)** = EKMFLGDQVZNTOWYHXUSPAIBRCJ
 - **1(II)** = AJDKSIRUXBLHWTMCQGZNPYFVOE
@@ -55,7 +55,7 @@ This is an array of strings each of which represent the standard rotors used by 
 - **8(Beta)** = LEYJVCNIXWPBQMDRTAKZGFUHOS
 - **9(Gamma)** = FSOKANUERHMBTIYCWLQPZXVGJD
 
-### Reflector Dictionary
+### Reflectors
 This is an array of strings each of which represents the standard reflectors used by the Germans during WWII. Each string is 26 characters long and each character represents a connection. The character at index 0 of the string is connected to 'A', the character at index 0 of the string is connected to 'B', etc.
 - **0(UKW-A)** = EJMZALYXVBWFCRQUONTSPIKHGD
 - **1(UKW-B)** = YRUHQSLDPXNGOKMIEBFZCWVJAT
