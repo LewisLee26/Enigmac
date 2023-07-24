@@ -1,4 +1,4 @@
-# Enigmacpp python
+# Enigmacpp
 
 ## Functions 
 ### enigma
