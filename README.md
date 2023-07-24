@@ -3,7 +3,7 @@
 Enigmacpp is a simulation of the Enigma Machine used by the Germans in WWII written in C++ for Python. 
 
 ## Example
-Here is a simple example of how to set up an enigma machine using its sub-components, encrypt, and decrypt a string:
+Here is a simple example of how to set up an Enigma Machine using its sub-components, encrypt, and decrypt a string:
 ```python
 import enigmacpp
 
@@ -16,7 +16,7 @@ reflector = enigmacpp.Connector(enigmacpp.reflectors[0])
 testString = "Hello World!"
 
 encryptedString = enigmacpp.enigma(testString, rotor1, rotor2, rotor3, plugboard, reflector)
-# This will output LKEUEHEAQE
+# This will output "LKEUEHEAQE"
 print(encryptedString)
 
 # You must use the same Enigma Machine settings to decode the message as you did to encode it
@@ -25,7 +25,7 @@ rotor2.setRotorPosition(0)
 rotor3.setRotorPosition(0)
 
 decryptedString = enigmacpp.enigma(encryptedString, rotor1, rotor2, rotor3, plugboard, reflector)
-# This will output HELLOWORLD
+# This will output "HELLOWORLD"
 print(decryptedString)
 ```
 
