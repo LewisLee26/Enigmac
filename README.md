@@ -1,9 +1,9 @@
 # Enigmacpp
 
-Enigmacpp is a simulation of the Enigma machine used by the Germans in WWII written in C++ for Python. 
+Enigmacpp is a simulation of the Enigma Machine used by the Germans in WWII written in C++ for Python. 
 
 ## Example
-Here is a simple example of how to set up an enigma machine using it's sub-components:
+Here is a simple example of how to set up an enigma machine using its sub-components:
 ```python
 import enigmacpp
 
