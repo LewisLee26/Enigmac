@@ -1,5 +1,0 @@
-C:/Users/lewis/Documents/GitHub/Enigmapy/build/CMakeFiles/enigma.dir
-C:/Users/lewis/Documents/GitHub/Enigmapy/build/CMakeFiles/enigmacpp.dir
-C:/Users/lewis/Documents/GitHub/Enigmapy/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/lewis/Documents/GitHub/Enigmapy/build/CMakeFiles/ZERO_CHECK.dir
-C:/Users/lewis/Documents/GitHub/Enigmapy/build/pybind11/CMakeFiles/ALL_BUILD.dir

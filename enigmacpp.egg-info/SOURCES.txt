@@ -1,8 +1,0 @@
-README.md
-setup.py
-enigmacpp.egg-info/PKG-INFO
-enigmacpp.egg-info/SOURCES.txt
-enigmacpp.egg-info/dependency_links.txt
-enigmacpp.egg-info/not-zip-safe
-enigmacpp.egg-info/requires.txt
-enigmacpp.egg-info/top_level.txt

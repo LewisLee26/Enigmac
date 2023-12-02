@@ -1,7 +1,0 @@
-Metadata-Version: 2.1
-Name: enigmacpp
-Version: 0.0.1
-Summary: A simulation of the enigma machine written in cpp
-Author: Lewis Lee
-Requires-Python: >=3.7
-Provides-Extra: test

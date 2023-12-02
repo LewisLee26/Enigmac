@@ -1,5 +1,0 @@
-C:/Users/lewis/Documents/GitHub/Enigmapy/build/temp.win-amd64-cpython-310/Release/enigmacpp/CMakeFiles/enigma.dir
-C:/Users/lewis/Documents/GitHub/Enigmapy/build/temp.win-amd64-cpython-310/Release/enigmacpp/CMakeFiles/enigmacpp.dir
-C:/Users/lewis/Documents/GitHub/Enigmapy/build/temp.win-amd64-cpython-310/Release/enigmacpp/CMakeFiles/ALL_BUILD.dir
-C:/Users/lewis/Documents/GitHub/Enigmapy/build/temp.win-amd64-cpython-310/Release/enigmacpp/CMakeFiles/ZERO_CHECK.dir
-C:/Users/lewis/Documents/GitHub/Enigmapy/build/temp.win-amd64-cpython-310/Release/enigmacpp/pybind11/CMakeFiles/ALL_BUILD.dir
