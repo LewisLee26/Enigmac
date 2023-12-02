@@ -1,7 +1,7 @@
 import ctypes
 import ctypes.util
 
-enigma_lib = ctypes.CDLL(r'C:\Users\lewis\Documents\GitHub\Enigma-Ciphertext-only-Attack\enigmac\enigma.dll')  # Replace with the actual path to your shared library
+enigma_lib = ctypes.CDLL(r'enigma.dll')  # Replace with the actual path to your shared library
 
 # Define the argument and return types for the run_enigma function
 enigma_lib.run_enigma.argtypes = [
