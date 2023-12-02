@@ -1,7 +1,7 @@
 # Enigma C
 
 This is a simulation for the Enigma Machine written in C.
-This code is designed to be a higher performance alternative to Enigma Machine simulations to be run in python with ctypes.  
+This code is designed to be a higher performance alternative to Enigma Machine simulations to be run in python with ctypes.
 
 ## How to use
 This is how to load the function into python with ctypes.
@@ -15,12 +15,12 @@ enigma_lib = ctypes.CDLL(r'enigma.dll')
 # Define the argument and return types for the run_enigma function
 enigma_lib.run_enigma.argtypes = [
     ctypes.c_int,                 # reflector
-    ctypes.POINTER(ctypes.c_int), # wheel_order
-    ctypes.c_char_p,              # ring_setting
-    ctypes.c_char_p,              # wheel_pos
-    ctypes.c_char_p,              # plugboard_pairs
-    ctypes.c_uint,                # plaintextsize
-    ctypes.c_char_p               # from
+    ctypes.POINTER(ctypes.c_int), # wheel_order, a list of three integers
+    ctypes.c_char_p,              # ring_setting, a uppercase string of length 3
+    ctypes.c_char_p,              # wheel_pos, a uppercase string of length 3
+    ctypes.c_char_p,              # plugboard_pairs, a uppercase string of max length 26
+    ctypes.c_uint,                # plaintextsize, a integer equal to the length of the input text
+    ctypes.c_char_p               # from, the input text 
 ]
 enigma_lib.run_enigma.restype = ctypes.c_char_p
 
@@ -54,6 +54,6 @@ This simulation has 5 rotors and three reflectors based on the Enigma I model
 | 1 | REFLECTOR_B | YRUHQSLDPXNGOKMIEBFZCWVJAT |
 | 2 | REFELCTOR_C | FVPJIAOYEDRZXWGCTKUQSBNMHL |
 
-## To Do 
-- Add in more enigma machine rotors and reflectors (low priority)
-- Add multithreading?
+### Plugboard
+The plugboard is a string of length 0-26 (must be even length).
+For example, the plugboard string "ARBYCOHXINMZ". In this example 'A' is linked to 'R', 'B' is linked to 'Y', etc.
